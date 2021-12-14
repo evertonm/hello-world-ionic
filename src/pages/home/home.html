@@ -7,8 +7,12 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Digite o usuário do github</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <button ion-button color="light" (click)="findRepos()">Buscar repositórios do usuário</button>
+  </ion-list>
+  <button-app-default [title]="'Configurar repositórios'" [repos]="repos"></button-app-default> 
 </ion-content>
